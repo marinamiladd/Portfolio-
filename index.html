@@ -218,33 +218,6 @@
       transform: translateY(-3px);
     }
 
-    .social-links {
-      display: flex;
-      gap: 1.2rem;
-    }
-
-    .social-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-    }
-
-    .social-icon:hover {
-      color: white;
-      background: var(--accent);
-      border-color: var(--accent);
-      transform: translateY(-3px);
-    }
-
     /* Profile Image Card */
     .hero-img-wrapper {
       position: relative;
@@ -523,45 +496,171 @@
     }
 
     /* Contact Section */
-    .contact-card {
-      background: var(--accent-gradient);
+    .contact-wrapper {
+      max-width: 650px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: 28px;
-      padding: 4rem 2rem;
+      padding: 3rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
 
-    .contact-card h2 {
-      font-size: 2.5rem;
+    .contact-wrapper h2 {
+      font-size: 2.2rem;
       font-weight: 800;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
     }
 
-    .contact-card p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin: 0 auto 2rem;
+    .contact-wrapper p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
     }
 
-    .contact-btn {
-      padding: 1rem 2.5rem;
-      background: white;
-      color: var(--bg-dark);
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
+    /* Direct Contact Info Box (Email & Phone text) */
+    .direct-contact-box {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .direct-contact-item {
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
+      gap: 0.6rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      padding: 0.7rem 1.2rem;
+      border-radius: 12px;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
-    .contact-btn:hover {
-      transform: translateY(-3px) scale(1.02);
+    .direct-contact-item i {
+      color: var(--accent);
+    }
+
+    .direct-contact-item:hover {
+      border-color: var(--accent);
+      background: rgba(99, 102, 241, 0.08);
+    }
+
+    /* Form Styles */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      background: rgba(11, 15, 25, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text-main);
+      font-family: var(--font-family);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--accent-gradient);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      box-shadow: 0 4px 25px rgba(99, 102, 241, 0.35);
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+    }
+
+    /* Divider */
+    .contact-divider {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    /* Social Links Row */
+    .contact-social-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .contact-social-btn:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      transform: translateY(-2px);
     }
 
     /* Footer */
@@ -593,11 +692,8 @@
       .hero-actions {
         justify-content: center;
       }
-      .social-links {
-        justify-content: center;
-      }
       .hero-img-wrapper {
-        order: 0; /* رجعنا الصورة لترتيبها الطبيعي عشان تظهر جانبية أو تحت الكلام بدون إجبار فوق */
+        order: 0;
       }
       .hero-img-card {
         width: 240px;
@@ -612,6 +708,9 @@
       }
       .project-img {
         min-height: 220px;
+      }
+      .contact-wrapper {
+        padding: 2rem;
       }
       header nav {
         display: none;
@@ -632,7 +731,7 @@
         <li><a href="#experience">Experience</a></li>
       </ul>
     </nav>
-    <a href="#contact" class="nav-btn">Contact Me</a>
+    <a href="Marina milad cv.pdf" class="nav-btn">Download CV <i class="fa-solid fa-download"></i></a>
   </header>
 
   <!-- Hero Section -->
@@ -648,12 +747,6 @@
         <div class="hero-actions">
           <a href="#projects" class="btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
           <a href="#contact" class="btn-secondary">Get in Touch</a>
-        </div>
-
-        <div class="social-links">
-          <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://github.com/marinamiladd" target="_blank" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="mailto:marinamilad923@gmail.com" class="social-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
 
@@ -799,12 +892,52 @@
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
-      <div class="contact-card">
-        <h2>Let's Work Together!</h2>
-        <p>I'm open to freelance projects, internships, and entry-level developer roles. Feel free to reach out to me.</p>
-        <a href="mailto:marinamilad923@gmail.com" class="contact-btn">
-          <i class="fa-solid fa-paper-plane"></i> Send an Email
-        </a>
+      <div class="contact-wrapper">
+        <h2>Get In Touch</h2>
+        <p>I'm always open to new opportunities and interesting projects. Feel free to reach out!</p>
+
+
+        <!-- Contact Form -->
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-group">
+            <label for="name">YOUR NAME *</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">YOUR EMAIL *</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">YOUR MESSAGE *</label>
+            <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <div class="contact-divider">Or connect with me on social media</div>
+
+        <!-- Social Media Buttons Row -->
+        <div class="contact-social-row">
+          <a href="https://github.com/marinamiladd" target="_blank" class="contact-social-btn">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-social-btn">
+            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+          </a>
+          <div class="direct-contact-box">
+          <div class="direct-contact-item">
+            <i class="fa-solid fa-envelope"></i> marinamilad923@gmail.com
+          </div>
+          <div class="direct-contact-item">
+            <i class="fa-solid fa-phone"></i> +201207131393
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
